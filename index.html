@@ -4,15 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Realistic Byte</title>
+
+  <!-- Fonts & Styles -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Google Model Viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
   <!-- HEADER -->
   <header>
-    <div class="logo">Realistic Byte</div>
+    <a href="index.html" class="logo">
+      <img src="images/Logo.jpeg" alt="Realistic Byte Logo">
+      <span>Realistic Byte</span>
+    </a>
 
     <!-- Hamburger Icon -->
     <div class="menu-toggle" id="mobile-menu">
@@ -31,13 +38,11 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-image">
-        <img src="images/FoodBackground.jpg" alt="Hero Image" class="hero-img">
-      </div>
-      <div class="hero-text">
-        <h1>"Transforming dish to an immersive experience"</h1>
-      </div>
+    <div class="hero-image">
+      <img src="images/FoodBackground.jpg" alt="Hero Image" class="hero-img">
+    </div>
+    <div class="hero-text">
+      <h1>"Transforming dish to an immersive experience"</h1>
     </div>
   </section>
 
@@ -66,55 +71,45 @@
   </section>
 
   <!-- SERVICE -->
-    <section id="service" class="service">
-        <div class="service-row">
+  <section id="service" class="service">
+    <div class="service-row">
+      <!-- LEFT COLUMN -->
+      <div class="service-col left">
+        <h2>What Do We Offer</h2>
 
-            <!-- LEFT COLUMN -->
-            <div class="service-col left">
-                <h2>What Do We Offer</h2>
+        <model-viewer
+          src="3Dmodels/pizza.glb"
+          ios-src="3Dmodels/pizza.usdz"
+          alt="3D model of a dish"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-scale="auto"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          environment-image="neutral"
+          style="width:100%;height:320px;border-radius:12px;background:#1a1a1a;">
+        </model-viewer>
+      </div>
 
-                <!-- ✅ Google Model Viewer (3D + AR for Android & iOS) -->
-                <model-viewer src="3Dmodels/pizza.glb" 
-                    ios-src="3Dmodels/pizza.usdz"
-                    alt="3D model of a dish"
-                    ar
-                    ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="auto"
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="1"
-                    environment-image="neutral"
-                    style="width: 100%; height: 320px; border-radius: 12px; background: #1a1a1a;">
-                </model-viewer>
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="service-col right">
-                <h3>Our Solution: See it, Love it, Order it</h3>
-                <p>
-                    Our service transforms your restaurant’s current menu presentation into an immersive dish preview.
-                    We convert your existing food photography into stunning, lifelike 3D models of every dish.
-                    Our technology then packages these assets into a custom-branded digital menu for your restaurant,
-                    accessible instantly by your customers.
-                </p>
-                <h4>Key Deliverables</h4>
-                <ul>
-                    <li><b>Hyper-Realistic 3D Models:</b> High-fidelity visualization showcasing the texture, color, and
-                        precise portion size of your food.</li>
-                    <li><b>Custom Digital Menu Interface:</b> A fully branded, intuitive, and easy-to-navigate front-end
-                        tailored to your restaurant's aesthetics.</li>
-                    <li><b>Instant AR Visualization:</b> Seamless, web-based AR technology that allows customers to view
-                        dishes on their table with <b>no special app required.</b></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-<!-- Google Model Viewer Script (include only once in your HTML) -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-
-
+      <!-- RIGHT COLUMN -->
+      <div class="service-col right">
+        <h3>Our Solution: See it, Love it, Order it</h3>
+        <p>
+          Our service transforms your restaurant’s current menu presentation into an immersive dish preview.
+          We convert your existing food photography into stunning, lifelike 3D models of every dish.
+          Our technology then packages these assets into a custom-branded digital menu for your restaurant,
+          accessible instantly by your customers.
+        </p>
+        <h4>Key Deliverables</h4>
+        <ul>
+          <li><b>Hyper-Realistic 3D Models:</b> High-fidelity visualization showcasing the texture, color, and precise portion size of your food.</li>
+          <li><b>Custom Digital Menu Interface:</b> A fully branded, intuitive, and easy-to-navigate front-end tailored to your restaurant's aesthetics.</li>
+          <li><b>Instant AR Visualization:</b> Seamless, web-based AR technology that allows customers to view dishes on their table with <b>no special app required.</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
@@ -135,7 +130,6 @@
     <div class="footer-logo">
       <img src="images/Logo.jpeg" alt="Company Logo">
     </div>
-
     <div class="footer-location">
       <h3>Location</h3>
       <ul>
@@ -145,6 +139,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
